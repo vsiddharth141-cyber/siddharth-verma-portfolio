@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#060913"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(30, 41, 59, 0.7)"/>
+      <stop offset="100%" stop-color="rgba(15, 23, 42, 0.8)"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#4facfe"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="500" rx="16" fill="url(#bgGrad)"/>
+  <rect width="800" height="500" rx="16" fill="none" stroke="rgba(0, 242, 254, 0.25)" stroke-width="1.5"/>
+
+  <!-- Top App Bar -->
+  <rect x="0" y="0" width="800" height="54" fill="rgba(15, 23, 42, 0.9)"/>
+  <line x1="0" y1="54" x2="800" y2="54" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+  
+  <!-- App Icon & Title -->
+  <circle cx="40" cy="27" r="14" fill="url(#greenGrad)"/>
+  <path d="M40 18 C37 22 35 25 35 28 C35 31 37 34 40 34 C43 34 45 31 45 28 C45 25 43 22 40 18 Z" fill="#ffffff"/>
+  <text x="64" y="32" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" letter-spacing="0.5">HomeRemedies</text>
+  <text x="180" y="32" fill="#10b981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">HEALTH &amp; WELLNESS</text>
+
+  <!-- Search Bar -->
+  <rect x="360" y="14" width="280" height="28" rx="14" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1"/>
+  <circle cx="378" cy="28" r="5" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="382" y1="32" x2="386" y2="36" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="396" y="32" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Search remedies (e.g., cough, herbal tea...)</text>
+
+  <!-- User Avatar / Status -->
+  <circle cx="750" cy="27" r="14" fill="rgba(0, 242, 254, 0.2)" stroke="#00f2fe" stroke-width="1.5"/>
+  <text x="750" y="31" text-anchor="middle" fill="#00f2fe" font-family="sans-serif" font-size="11" font-weight="bold">SV</text>
+
+  <!-- Left Sidebar (Categories) -->
+  <rect x="24" y="74" width="190" height="396" rx="12" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+  <text x="44" y="104" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="700" letter-spacing="1">CATEGORIES</text>
+
+  <!-- Category Items -->
+  <!-- Active Item: Respiratory -->
+  <rect x="36" y="120" width="166" height="38" rx="8" fill="rgba(0, 242, 254, 0.12)" stroke="rgba(0, 242, 254, 0.3)" stroke-width="1"/>
+  <circle cx="54" cy="139" r="6" fill="#00f2fe"/>
+  <text x="70" y="143" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="600">Cold &amp; Cough</text>
+  <rect x="168" y="130" width="22" height="18" rx="9" fill="rgba(0, 242, 254, 0.2)"/>
+  <text x="179" y="143" text-anchor="middle" fill="#00f2fe" font-family="sans-serif" font-size="10" font-weight="bold">12</text>
+
+  <!-- Inactive Items -->
+  <g opacity="0.85">
+    <rect x="36" y="168" width="166" height="38" rx="8" fill="rgba(255, 255, 255, 0.02)"/>
+    <circle cx="54" cy="187" r="5" fill="#10b981"/>
+    <text x="70" y="191" fill="#cbd5e1" font-family="sans-serif" font-size="13">Digestive Care</text>
+    <text x="179" y="191" text-anchor="middle" fill="#64748b" font-family="sans-serif" font-size="10">8</text>
+
+    <rect x="36" y="216" width="166" height="38" rx="8" fill="rgba(255, 255, 255, 0.02)"/>
+    <circle cx="54" cy="235" r="5" fill="#f59e0b"/>
+    <text x="70" y="239" fill="#cbd5e1" font-family="sans-serif" font-size="13">Skin &amp; Hair Care</text>
+    <text x="179" y="239" text-anchor="middle" fill="#64748b" font-family="sans-serif" font-size="10">15</text>
+
+    <rect x="36" y="264" width="166" height="38" rx="8" fill="rgba(255, 255, 255, 0.02)"/>
+    <circle cx="54" cy="283" r="5" fill="#8b5cf6"/>
+    <text x="70" y="287" fill="#cbd5e1" font-family="sans-serif" font-size="13">Immunity Boost</text>
+    <text x="179" y="287" text-anchor="middle" fill="#64748b" font-family="sans-serif" font-size="10">9</text>
+
+    <rect x="36" y="312" width="166" height="38" rx="8" fill="rgba(255, 255, 255, 0.02)"/>
+    <circle cx="54" cy="331" r="5" fill="#ec4899"/>
+    <text x="70" y="335" fill="#cbd5e1" font-family="sans-serif" font-size="13">Headache &amp; Stress</text>
+    <text x="179" y="335" text-anchor="middle" fill="#64748b" font-family="sans-serif" font-size="10">6</text>
+  </g>
+
+  <!-- Sidebar Banner: Info -->
+  <rect x="36" y="380" width="166" height="74" rx="8" fill="rgba(0, 242, 254, 0.05)" stroke="rgba(0, 242, 254, 0.15)" stroke-width="1"/>
+  <text x="46" y="402" fill="#00f2fe" font-family="sans-serif" font-size="11" font-weight="700">Holistic Wellness</text>
+  <text x="46" y="420" fill="#94a3b8" font-family="sans-serif" font-size="10">Practical home tips</text>
+  <text x="46" y="434" fill="#94a3b8" font-family="sans-serif" font-size="10">for everyday health</text>
+
+  <!-- Main Content Area -->
+  <!-- Top Banner within main -->
+  <rect x="230" y="74" width="546" height="70" rx="12" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+  <text x="250" y="104" fill="#ffffff" font-family="sans-serif" font-size="18" font-weight="700">Cold &amp; Cough Relief</text>
+  <text x="250" y="126" fill="#94a3b8" font-family="sans-serif" font-size="12">Natural remedies with kitchen ingredients to soothe throat and ease breathing</text>
+
+  <!-- Remedy Cards Grid -->
+  <!-- Card 1: Honey & Ginger -->
+  <g transform="translate(230, 160)">
+    <rect width="263" height="150" rx="10" fill="url(#cardGrad)" stroke="rgba(0, 242, 254, 0.2)" stroke-width="1.2"/>
+    <rect x="14" y="14" width="36" height="36" rx="8" fill="rgba(245, 158, 11, 0.15)"/>
+    <text x="32" y="38" text-anchor="middle" font-size="20">🍯</text>
+    <text x="60" y="28" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700">Honey &amp; Ginger Tea</text>
+    <text x="60" y="44" fill="#f59e0b" font-family="sans-serif" font-size="11" font-weight="600">Sore Throat &amp; Cough</text>
+    
+    <text x="16" y="74" fill="#94a3b8" font-family="sans-serif" font-size="11.5">Warm water with crushed fresh ginger,</text>
+    <text x="16" y="90" fill="#94a3b8" font-family="sans-serif" font-size="11.5">a spoonful of organic honey and lemon.</text>
+    
+    <rect x="16" y="112" width="76" height="22" rx="11" fill="rgba(255, 255, 255, 0.05)"/>
+    <text x="54" y="127" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="10">10 mins prep</text>
+    
+    <rect x="100" y="112" width="70" height="22" rx="11" fill="rgba(16, 185, 129, 0.1)"/>
+    <text x="135" y="127" text-anchor="middle" fill="#10b981" font-family="sans-serif" font-size="10">2x daily</text>
+  </g>
+
+  <!-- Card 2: Turmeric Milk -->
+  <g transform="translate(513, 160)">
+    <rect width="263" height="150" rx="10" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+    <rect x="14" y="14" width="36" height="36" rx="8" fill="rgba(234, 179, 8, 0.15)"/>
+    <text x="32" y="38" text-anchor="middle" font-size="20">🥛</text>
+    <text x="60" y="28" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700">Golden Turmeric Milk</text>
+    <text x="60" y="44" fill="#eab308" font-family="sans-serif" font-size="11" font-weight="600">Bedtime Recovery</text>
+    
+    <text x="16" y="74" fill="#94a3b8" font-family="sans-serif" font-size="11.5">Warm milk blended with pure turmeric,</text>
+    <text x="16" y="90" fill="#94a3b8" font-family="sans-serif" font-size="11.5">black pepper pinch and natural jaggery.</text>
+    
+    <rect x="16" y="112" width="76" height="22" rx="11" fill="rgba(255, 255, 255, 0.05)"/>
+    <text x="54" y="127" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="10">5 mins prep</text>
+    
+    <rect x="100" y="112" width="84" height="22" rx="11" fill="rgba(0, 242, 254, 0.1)"/>
+    <text x="142" y="127" text-anchor="middle" fill="#00f2fe" font-family="sans-serif" font-size="10">Bedtime drink</text>
+  </g>
+
+  <!-- Card 3: Steam Inhalation -->
+  <g transform="translate(230, 324)">
+    <rect width="263" height="146" rx="10" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+    <rect x="14" y="14" width="36" height="36" rx="8" fill="rgba(59, 130, 246, 0.15)"/>
+    <text x="32" y="38" text-anchor="middle" font-size="20">💨</text>
+    <text x="60" y="28" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700">Eucalyptus Steam</text>
+    <text x="60" y="44" fill="#60a5fa" font-family="sans-serif" font-size="11" font-weight="600">Nasal Congestion</text>
+    
+    <text x="16" y="72" fill="#94a3b8" font-family="sans-serif" font-size="11.5">Inhaling warm steam infused with</text>
+    <text x="16" y="88" fill="#94a3b8" font-family="sans-serif" font-size="11.5">tulsi leaves or eucalyptus oil.</text>
+    
+    <rect x="16" y="108" width="80" height="22" rx="11" fill="rgba(255, 255, 255, 0.05)"/>
+    <text x="56" y="123" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="10">Steam relief</text>
+  </g>
+
+  <!-- Card 4: Salt Water Gargle -->
+  <g transform="translate(513, 324)">
+    <rect width="263" height="146" rx="10" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+    <rect x="14" y="14" width="36" height="36" rx="8" fill="rgba(168, 85, 247, 0.15)"/>
+    <text x="32" y="38" text-anchor="middle" font-size="20">🧂</text>
+    <text x="60" y="28" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700">Warm Salt Gargle</text>
+    <text x="60" y="44" fill="#c084fc" font-family="sans-serif" font-size="11" font-weight="600">Irritated Throat</text>
+    
+    <text x="16" y="72" fill="#94a3b8" font-family="sans-serif" font-size="11.5">Half teaspoon of salt dissolved in warm</text>
+    <text x="16" y="88" fill="#94a3b8" font-family="sans-serif" font-size="11.5">distilled water. Reduces swelling.</text>
+    
+    <rect x="16" y="108" width="76" height="22" rx="11" fill="rgba(255, 255, 255, 0.05)"/>
+    <text x="54" y="123" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="10">3x daily</text>
+  </g>
+
+  <!-- Bottom Medical Disclaimer Tag -->
+  <rect x="230" y="475" width="546" height="18" fill="none"/>
+  <text x="503" y="487" text-anchor="middle" fill="#64748b" font-family="sans-serif" font-size="9.5">Informational wellness application only — not a substitute for professional medical advice</text>
+</svg>
