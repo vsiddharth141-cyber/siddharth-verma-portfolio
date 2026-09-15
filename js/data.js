@@ -37,8 +37,9 @@ export const PORTFOLIO_DATA = {
     email: "vsiddharth141@gmail.com",
     emailMailto: "mailto:vsiddharth141@gmail.com",
     linkedinUrl: "https://www.linkedin.com/in/siddharth-verma-488a3340a",
-    githubStatus: "Coming Soon",
-    githubUrl: null // Awaiting public GitHub profile URL
+    githubStatus: "Active",
+    githubUrl: "https://github.com/vsiddharth141-cyber",
+    youtubeUrl: "https://youtube.com/@cutpixelz"
   },
 
   skills: [
@@ -173,36 +174,112 @@ export const PORTFOLIO_DATA = {
 
   certificates: [
     {
-      id: "cert-1",
-      title: "Java Programming Completion Certificate",
-      issuer: "Technical Training Program",
-      description: "Core Java concepts, object-oriented design, application logic, and software problem-solving.",
-      previewStatus: "Certificate Preview Coming Soon",
-      icon: "award"
-    },
-    {
-      id: "cert-2",
-      title: "Introduction to Computer",
-      issuer: "Foundational IT Certification",
-      description: "Fundamentals of computer systems, architecture, operating principles, and computing literacy.",
-      previewStatus: "Certificate Preview Coming Soon",
-      icon: "monitor"
-    },
-    {
-      id: "cert-3",
+      id: "cert-ai",
       title: "AI for Everyone",
-      issuer: "Coursera",
+      issuer: "Coursera • DeepLearning.AI",
+      category: "Artificial Intelligence",
       description: "Fundamentals of Artificial Intelligence, practical AI applications, machine learning workflows, and real-world impact.",
-      previewStatus: "Certificate Preview Coming Soon",
-      icon: "brain"
+      image: "./assets/images/certificates/ai-for-everyone.jpg",
+      verifyUrl: "https://coursera.org/verify/IT10SYF0O9KN",
+      icon: "brain",
+      orientation: "landscape"
     },
     {
-      id: "cert-4",
-      title: "Code Alpha Internship",
-      issuer: "Code Alpha",
-      description: "Offer Letter and technical internship-related documentation. Verification document available.",
-      previewStatus: "Certificate Preview Coming Soon",
-      icon: "briefcase"
+      id: "cert-computer",
+      title: "Completion in Computer",
+      issuer: "EduPyramids • SINE, IIT Bombay",
+      category: "Computer Systems",
+      description: "Fundamentals of computer systems, architecture, operating principles, and computing literacy.",
+      image: "./assets/images/certificates/completion-in-computer.jpg",
+      verifyUrl: null,
+      icon: "monitor",
+      orientation: "landscape"
+    },
+    {
+      id: "cert-java",
+      title: "Java Programming",
+      issuer: "EduPyramids • SINE, IIT Bombay",
+      category: "Software Development",
+      description: "Core Java concepts, object-oriented design, application logic, and software problem-solving.",
+      image: "./assets/images/certificates/java-programming.jpg",
+      verifyUrl: null,
+      icon: "award",
+      orientation: "landscape"
+    },
+    {
+      id: "cert-offer",
+      title: "Coursera Offer Letter",
+      issuer: "CodeAlpha • Virtual Internship",
+      category: "Internship Offer Letter",
+      description: "Official selection and internship documentation for Virtual Java Programming Internship.",
+      image: "./assets/images/certificates/coursera-offer-letter.jpg",
+      verifyUrl: null,
+      icon: "briefcase",
+      orientation: "portrait"
+    }
+  ],
+
+  videoEdits: [
+    {
+      id: "beat-effects",
+      aliasId: "edit-1",
+      title: "Beat Effects",
+      subtitle: "High-Energy Rhythm & Transition Flow",
+      category: "Beat Effects / Short Edit",
+      featured: true,
+      enabled: true,
+      description: "Fast-paced short-form edit synchronized precisely with audio beats, featuring dynamic speed ramps, impact transitions, and visual rhythm.",
+      tags: ["Beat Sync", "Transitions", "Sound FX", "Rhythm Flow"],
+      videoSrc: "./assets/videos/Ghost Rider Is Built Different edit.mp4",
+      poster: "./assets/images/video-posters/beat-effects-poster.jpg",
+      badge: "Beat Effects",
+      duration: "0:52"
+    },
+    {
+      id: "animated-storytelling",
+      aliasId: "edit-2",
+      title: "Animated Storytelling",
+      subtitle: "Character Animation & Dialogue Sync",
+      category: "Animated Storytelling",
+      featured: false,
+      enabled: true,
+      description: "Character-driven visual narrative combining 2D avatar animations, kinetic sound design, speech dialogue, and engaging social pacing.",
+      tags: ["Character Animation", "Storytelling", "Audio Sync", "Creative Motion"],
+      videoSrc: "./assets/videos/lv_0_20260617110234.mp4",
+      poster: "./assets/images/video-posters/animated-storytelling-poster.jpg",
+      badge: "Animated Storytelling",
+      duration: "0:33"
+    },
+    {
+      id: "creative-edit",
+      aliasId: "edit-3",
+      title: "Creative Edit",
+      subtitle: "Visual Storytelling & Commercial Motion",
+      category: "Creative Edit",
+      featured: false,
+      enabled: true,
+      description: "Dynamic commercial motion edit featuring 3D product motion graphics, energetic pacing, fluid liquid effects, and sleek visual rhythm.",
+      tags: ["Commercial FX", "Visual Storytelling", "3D Motion", "Transitions"],
+      videoSrc: "./assets/videos/lv_0_20260621144611.mp4",
+      poster: "./assets/images/video-posters/creative-edit-poster.jpg",
+      badge: "Creative Edit",
+      duration: "0:22"
+    },
+    {
+      id: "motion-graphics",
+      aliasId: "edit-4",
+      title: "Motion Graphics",
+      subtitle: "Creative Motion Graphics & Visual FX",
+      category: "Motion Graphics",
+      featured: false,
+      enabled: true,
+      description: "Atmospheric visual storytelling and motion graphics emphasizing moody color grading harmony, scene transitions, and cinematic narrative flow.",
+      tags: ["Motion Graphics", "Visual Effects", "Color Grading", "Cinematic"],
+      videoSrc: "./assets/videos/lv_0_20260708170940.mp4",
+      poster: "./assets/images/video-posters/motion-graphics-poster.jpg",
+      badge: "Motion Graphics",
+      duration: "0:30"
     }
   ]
 };
+

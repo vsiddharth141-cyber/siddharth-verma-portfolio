@@ -25,6 +25,9 @@ $mimeTypes = @{
     ".jpg"  = "image/jpeg"
     ".jpeg" = "image/jpeg"
     ".png"  = "image/png"
+    ".webp" = "image/webp"
+    ".mp4"  = "video/mp4"
+    ".webm" = "video/webm"
     ".pdf"  = "application/pdf"
     ".ico"  = "image/x-icon"
 }
@@ -46,17 +49,65 @@ while ($listener.IsListening) {
         $response.AddHeader("Access-Control-Allow-Origin", "*")
         $response.AddHeader("Cache-Control", "no-cache")
 
+        if (-not [System.IO.File]::Exists($safePath)) {
+            $altPath = $safePath -replace '\s+\.mp4$', '.mp4'
+            if ([System.IO.File]::Exists($altPath)) {
+                $safePath = $altPath
+            }
+        }
+
         if ([System.IO.File]::Exists($safePath)) {
             $extension = [System.IO.Path]::GetExtension($safePath).ToLower()
             $contentType = if ($mimeTypes.ContainsKey($extension)) { $mimeTypes[$extension] } else { "application/octet-stream" }
+            $fileInfo = New-Object System.IO.FileInfo($safePath)
+            $fileLength = $fileInfo.Length
 
-            $bytes = [System.IO.File]::ReadAllBytes($safePath)
             $response.ContentType = $contentType
-            $response.ContentLength64 = $bytes.Length
-            $response.StatusCode = 200
+            $response.AddHeader("Accept-Ranges", "bytes")
 
-            if ($request.HttpMethod -ne "HEAD") {
-                $response.OutputStream.Write($bytes, 0, $bytes.Length)
+            $rangeHeader = $request.Headers["Range"]
+            if ($null -ne $rangeHeader -and $rangeHeader -match "bytes=(\d*)-(\d*)") {
+                $start = if ([string]::IsNullOrEmpty($matches[1])) { 0 } else { [int64]$matches[1] }
+                $end = if ([string]::IsNullOrEmpty($matches[2])) { $fileLength - 1 } else { [int64]$matches[2] }
+                if ($end -ge $fileLength) { $end = $fileLength - 1 }
+                $count = $end - $start + 1
+
+                $response.StatusCode = 206
+                $response.AddHeader("Content-Range", "bytes $start-$end/$fileLength")
+                $response.ContentLength64 = $count
+
+                if ($request.HttpMethod -ne "HEAD") {
+                    $fs = [System.IO.File]::OpenRead($safePath)
+                    try {
+                        $fs.Seek($start, [System.IO.SeekOrigin]::Begin) | Out-Null
+                        $buffer = New-Object byte[] 65536
+                        $remaining = $count
+                        while ($remaining -gt 0) {
+                            $toRead = [Math]::Min($buffer.Length, $remaining)
+                            $bytesRead = $fs.Read($buffer, 0, $toRead)
+                            if ($bytesRead -le 0) { break }
+                            $response.OutputStream.Write($buffer, 0, $bytesRead)
+                            $remaining -= $bytesRead
+                        }
+                    } finally {
+                        $fs.Close()
+                    }
+                }
+            } else {
+                $response.StatusCode = 200
+                $response.ContentLength64 = $fileLength
+
+                if ($request.HttpMethod -ne "HEAD") {
+                    $fs = [System.IO.File]::OpenRead($safePath)
+                    try {
+                        $buffer = New-Object byte[] 65536
+                        while (($bytesRead = $fs.Read($buffer, 0, $buffer.Length)) -gt 0) {
+                            $response.OutputStream.Write($buffer, 0, $bytesRead)
+                        }
+                    } finally {
+                        $fs.Close()
+                    }
+                }
             }
         } else {
             $response.StatusCode = 404
