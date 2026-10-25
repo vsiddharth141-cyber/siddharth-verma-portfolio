@@ -200,6 +200,22 @@
     width: 100%;
   }
 
+  .skills-category-card {
+    padding: 1.75rem 1.35rem;
+  }
+
+  .skill-row-card {
+    padding: 0.75rem 0.95rem;
+    gap: 0.5rem;
+  }
+
+  .skill-exp-badge {
+    text-align: right;
+    white-space: normal;
+    line-height: 1.3;
+    max-width: 55%;
+  }
+
   .highlights-grid {
     grid-template-columns: 1fr;
   }
@@ -344,6 +360,25 @@
   .btn {
     padding: 0.75rem 1.25rem;
     font-size: 0.9rem;
+  }
+
+  .skills-category-card {
+    padding: 1.4rem 1rem;
+  }
+
+  .skill-row-card {
+    padding: 0.65rem 0.8rem;
+    gap: 0.4rem;
+  }
+
+  .skill-name {
+    font-size: 0.88rem;
+  }
+
+  .skill-exp-badge {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.5rem;
+    max-width: 58%;
   }
 
   .modal-content {

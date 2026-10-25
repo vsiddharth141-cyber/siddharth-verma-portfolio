@@ -343,6 +343,17 @@
   color: var(--cyan);
 }
 
+.skill-item-icon svg {
+  display: block;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+
+.skill-row-card:hover .skill-item-icon svg {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.4));
+}
+
 .skill-name {
   font-size: 0.95rem;
   font-weight: 600;

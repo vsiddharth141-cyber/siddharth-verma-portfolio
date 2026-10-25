@@ -79,6 +79,7 @@ export const PORTFOLIO_DATA = {
         { name: "Video Editing", experience: "3+ Years Experience", icon: "video" },
         { name: "CapCut", experience: "Pacing & Viral Dynamics", icon: "film" },
         { name: "Alight Motion", experience: "Keyframe Motion & FX", icon: "play-circle" },
+        { name: "Adobe After Effects", experience: "Motion Graphics & Visual Effects", icon: "layers" },
         { name: "Post-Production", experience: "Color, Audio & Assembly", icon: "sliders" },
         { name: "Visual Storytelling", experience: "Audience Engagement", icon: "clapperboard" }
       ]
@@ -216,6 +217,18 @@ export const PORTFOLIO_DATA = {
       verifyUrl: null,
       icon: "briefcase",
       orientation: "portrait"
+    },
+    {
+      id: "cert-codealpha",
+      title: "Code Alpha Completion Certificate",
+      issuer: "CodeAlpha • Virtual Internship",
+      category: "Software Development",
+      description: "Successful completion of the CodeAlpha Virtual Internship Program in Java Programming (Student ID: CA/DF1/261664).",
+      image: "./assets/images/certificates/codealpha-completion-certificate.jpg",
+      pdfUrl: "./assets/certificates/codealpha-completion-certificate.pdf",
+      verifyUrl: null,
+      icon: "award",
+      orientation: "landscape"
     }
   ],
 

@@ -78,6 +78,8 @@ function initCertificateLightbox() {
   const tagEl = document.getElementById('cert-lightbox-tag');
   const verifyWrap = document.getElementById('cert-lightbox-verify-wrap');
   const verifyBtn = document.getElementById('cert-lightbox-verify-btn');
+  const pdfWrap = document.getElementById('cert-lightbox-pdf-wrap');
+  const pdfBtn = document.getElementById('cert-lightbox-pdf-btn');
 
   if (!modal) return;
 
@@ -99,6 +101,15 @@ function initCertificateLightbox() {
         verifyBtn.href = cert.verifyUrl;
       } else {
         verifyWrap.style.display = 'none';
+      }
+    }
+
+    if (pdfWrap && pdfBtn) {
+      if (cert.pdfUrl) {
+        pdfWrap.style.display = 'block';
+        pdfBtn.href = cert.pdfUrl;
+      } else {
+        pdfWrap.style.display = 'none';
       }
     }
 

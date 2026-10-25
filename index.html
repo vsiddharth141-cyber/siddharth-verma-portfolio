@@ -561,6 +561,19 @@
 
               <div class="skill-row-card">
                 <div class="skill-item-info">
+                  <div class="skill-item-icon" aria-label="Adobe After Effects">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="1.5" y="1.5" width="21" height="21" rx="4.5" fill="rgba(168, 85, 247, 0.16)" stroke="rgba(168, 85, 247, 0.65)" stroke-width="1.5"/>
+                      <text x="12" y="15.5" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#c084fc" text-anchor="middle" letter-spacing="-0.3">Ae</text>
+                    </svg>
+                  </div>
+                  <span class="skill-name">Adobe After Effects</span>
+                </div>
+                <span class="skill-exp-badge">Motion Graphics &amp; Visual Effects</span>
+              </div>
+
+              <div class="skill-row-card">
+                <div class="skill-item-info">
                   <div class="skill-item-icon">🎛️</div>
                   <span class="skill-name">Post-Production</span>
                 </div>
@@ -1188,6 +1201,48 @@
               </div>
             </div>
           </div>
+
+          <!-- Cert 5: Code Alpha Completion Certificate -->
+          <div class="glass-card certificate-card reveal-on-scroll tilt-effect" data-cert-id="cert-codealpha">
+            <div class="cert-image-preview-wrapper" role="button" tabindex="0" aria-label="Preview Code Alpha Completion Certificate" data-preview-cert="cert-codealpha">
+              <img 
+                src="./assets/images/certificates/codealpha-completion-certificate.jpg" 
+                alt="Code Alpha Completion Certificate - Java Programming" 
+                class="cert-thumbnail-img"
+                loading="lazy"
+              >
+              <div class="cert-image-overlay">
+                <span class="cert-expand-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+                  <span>View Full Certificate</span>
+                </span>
+              </div>
+            </div>
+            <div class="cert-card-body">
+              <div class="cert-meta-header">
+                <div class="cert-icon-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                </div>
+                <div class="cert-platform-pill">CodeAlpha</div>
+              </div>
+              <h3 class="cert-title">Code Alpha Completion Certificate</h3>
+              <div class="cert-issuer">CodeAlpha • Virtual Internship</div>
+              <p class="cert-desc">Successful completion of the CodeAlpha Virtual Internship Program in Java Programming (Student ID: CA/DF1/261664).</p>
+              <div class="cert-card-footer">
+                <a 
+                  href="./assets/certificates/codealpha-completion-certificate.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="btn btn-outline btn-sm cert-preview-btn" 
+                  id="view-codealpha-cert-btn"
+                  aria-label="View Code Alpha Completion Certificate PDF in a new tab"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                  <span>View Certificate</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1571,11 +1626,19 @@
       </div>
 
       <div class="cert-lightbox-footer">
-        <div class="cert-lightbox-verify" id="cert-lightbox-verify-wrap" style="display: none;">
-          <a id="cert-lightbox-verify-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            <span>Verify on Official Portal</span>
-          </a>
+        <div class="cert-lightbox-actions" style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+          <div class="cert-lightbox-pdf" id="cert-lightbox-pdf-wrap" style="display: none;">
+            <a id="cert-lightbox-pdf-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <span>View Certificate PDF</span>
+            </a>
+          </div>
+          <div class="cert-lightbox-verify" id="cert-lightbox-verify-wrap" style="display: none;">
+            <a id="cert-lightbox-verify-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span>Verify on Official Portal</span>
+            </a>
+          </div>
         </div>
         <button class="btn btn-secondary btn-sm" id="cert-lightbox-close-bottom">Close Preview</button>
       </div>
